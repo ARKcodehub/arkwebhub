@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ARK Web Templates | Business Website</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <h1>ARK Web Templates Hub</h1>
+    <nav>
+      <a href="#templates">Templates</a>
+      <a href="#features">Features</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button id="darkModeToggle" aria-label="Toggle Dark Mode" style="position: absolute; top: 20px; right: 20px; background: none; border: none; font-size: 1.5rem; cursor: pointer; color: white;">🌙</button>
+  </header>
+
+  <section class="hero">
+    <h1>Professional Business Website Templates</h1>
+    <p>Build beautiful, responsive websites for your clients or projects.</p>
+  </section>
+
+  <section id="templates" class="section">
+  <h2>Templates for Sale</h2>
+
+  <!-- Filter Buttons -->
+  <div style="text-align: center; margin-bottom: 2rem;">
+    <button class="btn filter-btn" data-category="all">All</button>
+    <button class="btn filter-btn" data-category="business">Business</button>
+    <button class="btn filter-btn" data-category="portfolio">Portfolio</button>
+    <button class="btn filter-btn" data-category="blog">Blog</button>
+  </div>
+
+  <div class="template-list">
+    <!-- Business Template -->
+    <div class="template-card" data-category="business">
+      <img src="assets/img/business-template.jpg" alt="Business Template">
+      <h3>Modern Business Template</h3>
+      <p>A clean, modern layout for agencies and startups.</p>
+      <a href="#" class="btn">Live Preview</a>
+      <a href="#" class="btn" style="margin-left: 10px; background: #10b981;">Buy Now</a>
+    </div>
+
+    <!-- Portfolio Template -->
+    <div class="template-card" data-category="portfolio">
+      <img src="assets/img/portfolio-template.jpg" alt="Portfolio Template">
+      <h3>Personal Portfolio</h3>
+      <p>Perfect for freelancers and developers showcasing their work.</p>
+      <a href="#" class="btn">Live Preview</a>
+      <a href="#" class="btn" style="margin-left: 10px; background: #10b981;">Buy Now</a>
+    </div>
+
+    <!-- Blog Template -->
+    <div class="template-card" data-category="blog">
+      <img src="assets/img/blog-template.jpg" alt="Blog Template">
+      <h3>Minimal Blog Template</h3>
+      <p>Ideal for bloggers who want a clean and distraction-free layout.</p>
+      <a href="#" class="btn">Live Preview</a>
+      <a href="#" class="btn" style="margin-left: 10px; background: #10b981;">Buy Now</a>
+    </div>
+  </div>
+</section>
+
+<script>
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  const cards = document.querySelectorAll('.template-card');
+
+  filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const category = button.getAttribute('data-category');
+      cards.forEach(card => {
+        const match = category === 'all' || card.dataset.category === category;
+        card.style.display = match ? 'block' : 'none';
+      });
+    });
+  });
+</script>
+
+
+  <section id="features" class="section">
+    <h2>Why Choose Our Templates?</h2>
+    <p>All templates are responsive, SEO-friendly, fast-loading, and built with clean code.</p>
+  </section>
+
+  <section id="contact" class="section">
+  <h2 style="text-align: center;">Contact</h2>
+  <p style="color: var(--gray); max-width: 600px; margin: 0 auto 2rem; font-size: 1rem;">Feel free to reach out through email or follow me on Instagram. I'm open to collaborations, projects, and feedback!</p>
+  <div style="display: flex; flex-direction: column; align-items: center; gap: 2rem; max-width: 600px; margin: auto;">
+    <div style="background: white; border-radius: 16px; padding: 24px 28px; box-shadow: 0 8px 24px rgba(0,0,0,0.08); width: 100%; transition: transform 0.3s ease;">
+      <h3 style="margin-bottom: 12px; color: var(--primary); font-size: 1.2rem;">📧 Email Me</h3>
+      <p style="margin-bottom: 14px; font-size: 1rem; color: var(--text); font-weight: 500;">arkhub.webdeveloper@gmail.com</p>
+      <a href="mailto:arkhub.webdeveloper@gmail.com" class="btn" style="width: 100%; text-align: center; font-weight: 600;">Send Email</a>
+    </div>
+
+    <div style="background: white; border-radius: 16px; padding: 24px 28px; box-shadow: 0 8px 24px rgba(0,0,0,0.08); width: 100%; transition: transform 0.3s ease;">
+      <h3 style="margin-bottom: 12px; color: #e1306c; font-size: 1.2rem;">📸 Instagram</h3>
+      <p style="margin-bottom: 14px; font-size: 1rem; color: var(--text); font-weight: 500;">@arkbhai5486</p>
+      <a href="https://instagram.com/arkbhai5486" target="_blank" class="btn" style="width: 100%; text-align: center; font-weight: 600;">Visit Profile</a>
+    </div>
+  </div>
+</section>
+
+  <footer>
+    <p>&copy; 2025 ARK Web Hub. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+<script>
+  const darkToggleBtn = document.getElementById('darkModeToggle');
+  const body = document.body;
+  let darkMode = localStorage.getItem('theme') === 'dark';
+
+  function updateThemeIcon() {
+    darkToggleBtn.textContent = darkMode ? '☀️' : '🌙';
+  }
+
+  function applyTheme() {
+    body.classList.toggle('dark-mode', darkMode);
+    localStorage.setItem('theme', darkMode ? 'dark' : 'light');
+    updateThemeIcon();
+  }
+
+  darkToggleBtn.addEventListener('click', () => {
+    darkMode = !darkMode;
+    applyTheme();
+  });
+
+  applyTheme();
+</script>
+</html>
