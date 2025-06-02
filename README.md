@@ -1,69 +1,54 @@
+# Ark Web Hub 🌐
 
-# ARKcodehub | Portfolio
+Welcome to **Ark Web Hub** — a personal portfolio and template showcase website built with clean HTML, CSS, and JavaScript.
 
-Welcome to the official portfolio of **Aramalla Ranjith Kumar**, also known as **ARKhub**. This project is a clean, modern, and responsive personal website that showcases my web development skills, services, and contact details.
+This site features:
 
-## 🌐 Portfolio Live Demo
+- 🎨 Professionally designed business, portfolio, and blog templates
+- 🔍 Dynamic category filtering
+- 🌙 Dark mode toggle with icon-based switch
+- 📱 Responsive layout using CSS Grid
+- ✨ Smooth scroll animations
 
-👉 [View Live Portfolio](https://arkcodehub.github.io/arkcodehub-portfolio/)
+## 🚀 Live Demo
 
-## 🛠️ Tech Stack
-
-- **HTML5**
-- **CSS3** (with responsive styling and theming)
-- **JavaScript** (for scroll animations and dark mode toggle)
-
-## 🔥 Features
-
-- Responsive design suitable for all devices
-- Dark mode toggle with theme persistence
-- Smooth scroll-triggered section animations
-- Easy navigation with sticky header
-- Sectioned layout: About, Skills, Templates, Contact
-
-## 📂 Project Structure
+Once deployed, your site will be live at:
 
 ```
-📁 project-folder/
-│
-├── index.html         # Main HTML structure
-├── style.css          # Styling and themes
-└── script.js          # JavaScript functionality
+https://arkwebhub.github.io
 ```
 
-## ✨ Sections
+Or with a custom domain like:
 
-- **Hero**: Introduction with name and roles
-- **About Me**: Personal background and goals
-- **Skills**: Technologies and services offered
-- **Templates**: Showcase of website templates
-- **Contact**: Email and Instagram details
+```
+https://arkwebhub.com
+```
 
-## ⚙️ Setup
+## 🗂️ Project Structure
 
-1. Clone the repository:
+```
+arkwebhub/
+├── index.html
+├── style.css
+├── script.js
+├── assets/
+│   └── img/
+│       ├── business-template.jpg
+│       ├── portfolio-template.jpg
+│       └── blog-template.jpg
+└── README.md
+```
 
-   ```bash
-   git clone https://github.com/your-username/arkcodehub-portfolio.git
-   ```
+## 🧰 Technologies Used
 
-2. Open `index.html` in your browser or use a live server extension.
+- HTML5
+- CSS3
+- JavaScript (vanilla)
 
-## 📧 Contact
+## 📄 License
 
-- **Email**: arkhub.webdeveloper@gmail.com  
-- **Instagram**: [@arkbhai5486](https://instagram.com/arkbhai5486)
+This project is open-source. Feel free to use or adapt it for personal or commercial projects. Attribution appreciated.
 
 ---
 
-## 🌐 Visit My Business Website
-
-👉 [ARK Web Hub](https://arkcodehub.github.io/arkwebhub/)
-
-## 📝 License
-
-This project is open-source and available under the [MIT License](LICENSE).
-
----
-
-> Designed and developed with 💻 by Aramalla Ranjith Kumar (ARKhub)
+Crafted with ❤️ by Aramalla Ranjith Kumar (ARK)
