@@ -206,3 +206,29 @@ footer {
   0% { opacity: 0; transform: scale(0.95); }
   100% { opacity: 1; transform: scale(1); }
 }
+
+
+/* Auth Button Styles */
+.auth-controls {
+  margin-right: 80px;
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.auth-btn {
+  background-color: #10b981;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.auth-btn:hover {
+  background-color: #059669;
+}
