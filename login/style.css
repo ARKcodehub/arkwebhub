@@ -1,0 +1,118 @@
+/* style.css */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #5e60ce, #9333ea);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+  display: flex;
+  padding: 40px;
+  backdrop-filter: blur(12px);
+  animation: fadeIn 1s ease-in-out;
+}
+
+.login-card {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.branding {
+  flex: 1;
+  text-align: center;
+  color: #fff;
+}
+
+.branding .logo {
+  width: 160px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.branding h1 {
+  font-size: 32px;
+  margin: 10px 0;
+}
+
+.branding p {
+  font-size: 16px;
+  color: #e0e0e0;
+}
+
+.login-box {
+  flex: 1;
+  background-color: rgba(255, 255, 255, 0.07);
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  color: #fff;
+}
+
+.login-box h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  text-align: center;
+}
+
+.login-box input[type="text"],
+.login-box input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #fff;
+}
+
+.login-box input::placeholder {
+  color: #ddd;
+}
+
+.login-box label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+.login-btn, #googleLogin {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 24px;
+  background-color: #d946ef;
+  color: #fff;
+  font-size: 16px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.login-btn:hover, #googleLogin:hover {
+  background-color: #c026d3;
+}
+
+.login-box p {
+  text-align: center;
+  margin: 15px 0 10px;
+  color: #ccc;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: scale(0.95); }
+  100% { opacity: 1; transform: scale(1); }
+}
