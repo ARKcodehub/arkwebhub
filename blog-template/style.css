@@ -1,0 +1,226 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #ffffff;
+  color: #1f2937;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+body.dark-mode {
+  background: #0e0e2b;
+  color: #ffffff;
+}
+
+/* Header */
+header {
+  background: #4b5563;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+  position: relative;
+}
+
+#darkModeToggle {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+  padding: 3rem 1rem;
+  text-align: center;
+  background: #f9fafb;
+}
+
+.hero-img {
+  max-width: 90%;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+}
+
+/* Buttons */
+.cta {
+  margin-top: 1rem;
+}
+
+.btn {
+  padding: 12px 20px;
+  font-size: 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.btn.buy {
+  background: #10b981;
+  color: white;
+  border: none;
+}
+
+.btn.buy:hover {
+  background: #059669;
+}
+
+/* Payments Text */
+.payments {
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  text-align: center;
+  color: #4b5563;
+}
+
+/* Content Sections */
+.features,
+.portfolio,
+.blog-posts {
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Cards */
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #f1f5f9;
+  padding: 1rem;
+  border-radius: 8px;
+  min-width: 200px;
+  flex: 1 1 250px;
+}
+
+/* Contact Section */
+.contact {
+  background: #f9fafb;  /* dark blue-gray */
+  text-align: center;
+  padding: 2rem;
+  color: #1f2937;      /* softer white for light mode */
+}
+
+/* Footer */
+footer {
+  padding: 1.5rem;
+  text-align: center;
+  background: #4b5563;
+  color: white;
+  margin-top: auto;
+}
+
+/* === Dark Mode Adjustments === */
+body.dark-mode .hero {
+  background: #1e293b;
+}
+
+body.dark-mode .hero h2,
+body.dark-mode .payments,
+body.dark-mode .cta,
+body.dark-mode .features,
+body.dark-mode .portfolio,
+body.dark-mode .blog-posts {
+  color: #e5e7eb;
+}
+
+body.dark-mode .payments {
+  color: #d1d5db;
+}
+
+body.dark-mode .btn.buy {
+  background: #10b981;
+  color: white;
+}
+
+body.dark-mode .btn.buy:hover {
+  background: #059669;
+}
+
+body.dark-mode a {
+  color: #bb86fc;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6 {
+  color: #ffffff;
+}
+
+body.dark-mode .card {
+  background-color: #1c1c3c;
+  color: #ffffff;
+}
+
+body.dark-mode .contact {
+  background: #1c1c3c;  /* dark background */
+  color: #ffffff;       /* light text */
+}
+
+/* Optional: Smoother transitions for background and color changes */
+body, header, .contact, .card {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cards .card {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s forwards;
+  background: #f1f5f9;
+  padding: 1rem;
+  border-radius: 8px;
+  min-width: 200px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.cards .card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+}
+
+.cards .card:nth-child(1) { animation-delay: 0.1s; }
+.cards .card:nth-child(2) { animation-delay: 0.2s; }
+.cards .card:nth-child(3) { animation-delay: 0.3s; }
+
+/* Dark mode */
+body.dark-mode .card {
+  background-color: #1c1c3c;
+  color: #ffffff;
+  box-shadow: 0 4px 8px rgba(255,255,255,0.1);
+}
+
+body.dark-mode .card:hover {
+  box-shadow: 0 12px 24px rgba(255,255,255,0.15);
+}
+
+/* Fade-in keyframes */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
